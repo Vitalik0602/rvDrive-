@@ -5,6 +5,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+        // Close mobile menu after clicking a link
+        if (window.innerWidth <= 768) {
+            document.querySelector('nav').classList.remove('active');
+        }
     });
 });
 
