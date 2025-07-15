@@ -126,6 +126,12 @@
         <section id="request" class="request">
             <h2>Оставить заявку на осмотр</h2>
             <form id="inspectionForm">
+                <label for="requestType">Тип заявки:</label>
+                <select id="requestType" name="requestType" required>
+                    <option value="">-- Выберите тип --</option>
+                    <option value="purchase">Покупка</option>
+                    <option value="commission">Комиссия</option>
+                </select>
                 <label for="car">Выберите автомобиль:</label>
                 <select id="car" name="car" required>
                     <option value="">-- Выберите модель --</option>
@@ -139,13 +145,14 @@
                     <option value="Модель 8">Модель 8 - Внедорожник</option>
                     <option value="Модель 9">Модель 9 - Гибрид</option>
                     <option value="Модель 10">Модель 10 - Суперкар</option>
+                    <option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>
                 </select>
                 <label for="service">Выберите услугу:</label>
                 <select id="service" name="service" required>
                     <option value="">-- Выберите услугу --</option>
                     <option value="Покупка">Покупка</option>
                     <option value="Аренда">Аренда</option>
-                    <option value="Выкуп">Выкуп</option>
+                    <option value="Оценка и выкуп">Оценка и выкуп</option>
                 </select>
                 <label for="fullName">ФИО:</label>
                 <input type="text" id="fullName" name="fullName" required placeholder="Введите ваше ФИО">
@@ -164,6 +171,25 @@
         // Toggle mobile menu
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Dynamic service options based on request type
+        const requestType = document.getElementById('requestType');
+        const service = document.getElementById('service');
+        const car = document.getElementById('car');
+
+        requestType.addEventListener('change', function() {
+            const type = this.value;
+            service.innerHTML = '<option value="">-- Выберите услугу --</option>';
+
+            if (type === 'purchase') {
+                service.innerHTML += '<option value="Покупка">Покупка</option>';
+                service.innerHTML += '<option value="Аренда">Аренда</option>';
+                car.value = ''; // Reset car selection
+            } else if (type === 'commission') {
+                service.innerHTML += '<option value="Оценка и выкуп">Оценка и выкуп</option>';
+                car.value = 'Мой автомобиль'; // Default to "My car" for commission
+            }
         });
     </script>
 </body>
