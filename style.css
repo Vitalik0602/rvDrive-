@@ -49,7 +49,7 @@ header {
 nav {
     flex-grow: 1;
     text-align: center;
-    display: none;
+    display: flex; /* Default display for desktop */
 }
 
 nav ul {
@@ -103,8 +103,8 @@ nav ul li a:hover {
 
 .hero {
     text-align: center;
-    padding: 60px 20px 20px; /* Adjusted padding to account for fixed header */
-    min-height: auto; /* Removed fixed height to allow content to dictate size */
+    padding: 60px 20px 20px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -188,11 +188,11 @@ nav ul li a:hover {
 
 .hero .features li {
     font-size: 0.9em;
-    margin: 5px 0; /* Reduced margin for better fitting */
+    margin: 5px 0;
     position: relative;
     font-weight: 500;
-    width: 100%; /* Ensure full width for better visibility */
-    text-align: left; /* Align left for readability */
+    width: 100%;
+    text-align: left;
 }
 
 .hero .features li::before {
@@ -254,7 +254,7 @@ nav ul li a:hover {
     margin-top: 15px;
     position: relative;
     z-index: 3;
-    width: 100%; /* Ensure full width for better wrapping */
+    width: 100%;
 }
 
 .cars {
@@ -512,7 +512,7 @@ footer {
     }
 
     .hero {
-        padding-top: 50px; /* Adjusted for header */
+        padding-top: 50px;
     }
 
     .slide .car-image {
