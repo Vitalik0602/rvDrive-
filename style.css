@@ -47,10 +47,10 @@ header {
 }
 
 nav {
-    flex-grow: 0; /* Removed extra growth to prevent stretching */
+    flex-grow: 0;
     display: flex;
-    justify-content: center; /* Center the nav content horizontally */
-    align-items: center; /* Center vertically within the header */
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -59,7 +59,7 @@ nav ul {
     gap: 15px;
     padding: 0;
     margin: 0;
-    text-align: center; /* Ensure text within li is centered */
+    text-align: center;
 }
 
 nav ul li a {
@@ -70,7 +70,7 @@ nav ul li a {
     font-weight: 500;
     font-size: 0.9em;
     display: flex;
-    align-items: center; /* Vertically center the link text */
+    align-items: center;
 }
 
 nav ul li a:hover {
