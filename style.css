@@ -31,7 +31,7 @@ header {
 }
 
 .logo img {
-    height: 30px; /* Reduced for mobile */
+    height: 30px;
     margin-right: 10px;
     transition: transform 0.3s ease;
 }
@@ -41,7 +41,7 @@ header {
 }
 
 .logo span {
-    font-size: 1em; /* Adjusted for mobile */
+    font-size: 1em;
     font-weight: 600;
     color: #fff;
 }
@@ -49,7 +49,7 @@ header {
 nav {
     flex-grow: 1;
     text-align: center;
-    display: none; /* Hidden by default on mobile */
+    display: none;
 }
 
 nav ul {
@@ -77,12 +77,12 @@ nav ul li a:hover {
 
 .social-icons {
     display: flex;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 10px;
 }
 
 .social-icons a {
     color: #fff;
-    font-size: 1.2em; /* Slightly reduced for mobile */
+    font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
@@ -103,8 +103,8 @@ nav ul li a:hover {
 
 .hero {
     text-align: center;
-    padding: 60px 20px 20px; /* Reduced padding for mobile */
-    min-height: 400px; /* Adjustable height for mobile */
+    padding: 60px 20px 20px; /* Adjusted padding to account for fixed header */
+    min-height: auto; /* Removed fixed height to allow content to dictate size */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -138,7 +138,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 1.8em; /* Reduced for mobile */
+    font-size: 1.8em;
     margin: 15px 0;
     position: relative;
     z-index: 3;
@@ -148,7 +148,7 @@ nav ul li a:hover {
 }
 
 .hero p.fade-in {
-    font-size: 1em; /* Reduced for mobile */
+    font-size: 1em;
     position: relative;
     z-index: 3;
     animation: textSlideUp 2s ease-out;
@@ -156,7 +156,7 @@ nav ul li a:hover {
 }
 
 .hero .intro {
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
     max-width: 90%;
     margin: 15px auto;
     padding: 0 10px;
@@ -181,19 +181,24 @@ nav ul li a:hover {
     background: rgba(44, 44, 44, 0.8);
     border-radius: 10px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero .features li {
-    font-size: 0.9em; /* Reduced for mobile */
-    margin: 8px 0;
+    font-size: 0.9em;
+    margin: 5px 0; /* Reduced margin for better fitting */
     position: relative;
     font-weight: 500;
+    width: 100%; /* Ensure full width for better visibility */
+    text-align: left; /* Align left for readability */
 }
 
 .hero .features li::before {
     content: '✔';
     color: #ff0000;
-    margin-right: 5px; /* Reduced margin for mobile */
+    margin-right: 5px;
 }
 
 @keyframes changeBackground {
@@ -205,7 +210,7 @@ nav ul li a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 15px; /* Reduced padding for mobile */
+    padding: 8px 15px;
     background-color: #ff0000;
     color: #fff;
     text-decoration: none;
@@ -216,8 +221,8 @@ nav ul li a:hover {
     transition: all 0.3s ease;
     overflow: hidden;
     font-weight: 600;
-    font-size: 0.9em; /* Reduced for mobile */
-    height: 35px; /* Reduced height for mobile */
+    font-size: 0.9em;
+    height: 35px;
 }
 
 .cta.secondary {
@@ -237,29 +242,30 @@ nav ul li a:hover {
 
 .cta:hover {
     background-color: #cc0000;
-    transform: translateY(-2px); /* Reduced lift for mobile */
-    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.5); /* Reduced shadow for mobile */
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.5);
 }
 
 .hero .cta-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px; /* Reduced gap for mobile */
+    gap: 5px;
     margin-top: 15px;
     position: relative;
     z-index: 3;
+    width: 100%; /* Ensure full width for better wrapping */
 }
 
 .cars {
-    padding: 30px 15px; /* Reduced padding for mobile */
+    padding: 30px 15px;
     text-align: center;
     background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
     animation: gradientShift 5s infinite alternate;
 }
 
 .cars h2 {
-    font-size: 1.5em; /* Reduced for mobile */
+    font-size: 1.5em;
     border-bottom: 2px solid #ff0000;
     display: inline-block;
     padding-bottom: 5px;
@@ -268,7 +274,7 @@ nav ul li a:hover {
 }
 
 .cars p {
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
     animation: textFadeIn 1s ease-out 0.5s backwards;
     font-weight: 500;
 }
@@ -276,7 +282,7 @@ nav ul li a:hover {
 .slider-container {
     position: relative;
     max-width: 100%;
-    margin: 20px auto; /* Reduced margin for mobile */
+    margin: 20px auto;
     overflow: hidden;
 }
 
@@ -288,15 +294,15 @@ nav ul li a:hover {
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 15px;
     text-align: center;
     opacity: 0;
     animation: slideFadeIn 0.5s forwards;
 }
 
 .slide .car-image {
-    height: 150px; /* Reduced height for mobile */
-    margin-bottom: 10px; /* Reduced margin for mobile */
+    height: 150px;
+    margin-bottom: 10px;
     border: 2px solid #ff0000;
     border-radius: 10px;
     overflow: hidden;
@@ -312,14 +318,14 @@ nav ul li a:hover {
 }
 
 .slide h3 {
-    font-size: 1.2em; /* Reduced for mobile */
-    margin: 8px 0; /* Reduced margin for mobile */
+    font-size: 1.2em;
+    margin: 8px 0;
     animation: textPopUp 0.7s ease-out;
     font-weight: 600;
 }
 
 .slide p {
-    font-size: 0.8em; /* Reduced for mobile */
+    font-size: 0.8em;
     color: #ccc;
     animation: textFadeIn 1s ease-out 0.3s backwards;
     font-weight: 400;
@@ -332,19 +338,19 @@ nav ul li a:hover {
     background-color: #ff0000;
     color: #fff;
     border: none;
-    padding: 8px; /* Reduced padding for mobile */
+    padding: 8px;
     cursor: pointer;
-    font-size: 1.2em; /* Reduced for mobile */
+    font-size: 1.2em;
     z-index: 10;
     font-weight: 600;
 }
 
 .prev {
-    left: 5px; /* Reduced margin for mobile */
+    left: 5px;
 }
 
 .next {
-    right: 5px; /* Reduced margin for mobile */
+    right: 5px;
 }
 
 .prev:hover, .next:hover {
@@ -352,13 +358,13 @@ nav ul li a:hover {
 }
 
 .about {
-    padding: 30px 15px; /* Reduced padding for mobile */
+    padding: 30px 15px;
     text-align: center;
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
 }
 
 .about h2 {
-    font-size: 1.5em; /* Reduced for mobile */
+    font-size: 1.5em;
     border-bottom: 2px solid #ff0000;
     display: inline-block;
     padding-bottom: 5px;
@@ -367,22 +373,22 @@ nav ul li a:hover {
 }
 
 .about p {
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
     max-width: 90%;
-    margin: 15px auto; /* Reduced margin for mobile */
+    margin: 15px auto;
     font-weight: 400;
     animation: textFadeIn 1s ease-out 0.5s backwards;
 }
 
 .specials {
-    padding: 30px 15px; /* Reduced padding for mobile */
+    padding: 30px 15px;
     text-align: center;
     background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
     animation: gradientShift 5s infinite alternate;
 }
 
 .specials h2 {
-    font-size: 1.5em; /* Reduced for mobile */
+    font-size: 1.5em;
     border-bottom: 2px solid #ff0000;
     display: inline-block;
     padding-bottom: 5px;
@@ -392,8 +398,8 @@ nav ul li a:hover {
 
 .special-offer {
     max-width: 90%;
-    margin: 15px auto; /* Reduced margin for mobile */
-    padding: 15px; /* Reduced padding for mobile */
+    margin: 15px auto;
+    padding: 15px;
     background: rgba(44, 44, 44, 0.8);
     border-radius: 10px;
     border: 2px solid #ff0000;
@@ -401,29 +407,29 @@ nav ul li a:hover {
 }
 
 .special-offer h3 {
-    font-size: 1.2em; /* Reduced for mobile */
+    font-size: 1.2em;
     color: #ff0000;
     font-weight: 600;
 }
 
 .special-offer p {
-    font-size: 0.8em; /* Reduced for mobile */
-    margin: 8px 0; /* Reduced margin for mobile */
+    font-size: 0.8em;
+    margin: 8px 0;
     font-weight: 400;
 }
 
 .special-offer .cta {
-    margin-top: 10px; /* Reduced margin for mobile */
+    margin-top: 10px;
 }
 
 .request {
-    padding: 30px 15px; /* Reduced padding for mobile */
+    padding: 30px 15px;
     text-align: center;
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
 }
 
 .request h2 {
-    font-size: 1.5em; /* Reduced for mobile */
+    font-size: 1.5em;
     border-bottom: 2px solid #ff0000;
     display: inline-block;
     padding-bottom: 5px;
@@ -433,49 +439,49 @@ nav ul li a:hover {
 
 .request form {
     max-width: 90%;
-    margin: 15px auto; /* Reduced margin for mobile */
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 10px;
 }
 
 .request label {
     font-weight: 500;
     text-align: left;
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
 }
 
 .request select, .request input {
-    padding: 8px; /* Reduced padding for mobile */
+    padding: 8px;
     font-family: 'Poppins', sans-serif;
     border: 1px solid #ff0000;
     border-radius: 5px;
     background-color: #333;
     color: #fff;
     font-weight: 400;
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
 }
 
 .request button[type="submit"] {
     cursor: pointer;
-    padding: 8px; /* Reduced padding for mobile */
-    font-size: 0.9em; /* Reduced for mobile */
+    padding: 8px;
+    font-size: 0.9em;
 }
 
 #formMessage {
     color: #ff0000;
     font-weight: 500;
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
 }
 
 footer {
     text-align: center;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 15px;
     background-color: #2c2c2c;
     position: relative;
     animation: fadeInUp 1s ease-out;
     font-weight: 500;
-    font-size: 0.9em; /* Reduced for mobile */
+    font-size: 0.9em;
 }
 
 /* Media Query for Mobile (max-width: 768px) */
@@ -506,23 +512,22 @@ footer {
     }
 
     .hero {
-        min-height: 300px; /* Reduced height for mobile */
         padding-top: 50px; /* Adjusted for header */
     }
 
     .slide .car-image {
-        height: 120px; /* Further reduced for smaller screens */
+        height: 120px;
     }
 
     .cta {
-        padding: 6px 12px; /* Further reduced for smaller screens */
-        font-size: 0.8em; /* Further reduced for smaller screens */
-        height: 30px; /* Further reduced for smaller screens */
+        padding: 6px 12px;
+        font-size: 0.8em;
+        height: 30px;
     }
 
     .prev, .next {
-        padding: 6px; /* Further reduced for smaller screens */
-        font-size: 1em; /* Further reduced for smaller screens */
+        padding: 6px;
+        font-size: 1em;
     }
 }
 
