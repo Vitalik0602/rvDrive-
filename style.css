@@ -47,9 +47,10 @@ header {
 }
 
 nav {
-    flex-grow: 1;
-    text-align: center;
-    display: flex; /* Default display for desktop */
+    flex-grow: 0; /* Removed extra growth to prevent stretching */
+    display: flex;
+    justify-content: center; /* Center the nav content horizontally */
+    align-items: center; /* Center vertically within the header */
 }
 
 nav ul {
@@ -58,6 +59,7 @@ nav ul {
     gap: 15px;
     padding: 0;
     margin: 0;
+    text-align: center; /* Ensure text within li is centered */
 }
 
 nav ul li a {
@@ -67,6 +69,8 @@ nav ul li a {
     position: relative;
     font-weight: 500;
     font-size: 0.9em;
+    display: flex;
+    align-items: center; /* Vertically center the link text */
 }
 
 nav ul li a:hover {
