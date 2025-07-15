@@ -13,6 +13,7 @@
             <img src="img/logo.png" alt="rvDrive Logo">
             <span>rvDrive</span>
         </div>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         <nav>
             <ul>
                 <li><a href="#home">Главная</a></li>
@@ -32,7 +33,7 @@
         <section id="home" class="hero">
             <div class="glass-overlay"></div>
             <h1>Добро пожаловать в rvDrive</h1>
-            <p class="fade-in">Авто по первым ценам РФ</p>
+            <p class="fade-in">Авто по первых ценам РФ</p>
             <p class="intro">Откройте для себя мир современных автомобилей! У нас вы найдете стильные седаны, мощные спорткары, комфортные SUV и инновационные электромобили. Каждый автомобиль — это сочетание дизайна, технологий и доступности.</p>
             <ul class="features">
                 <li>Широкий выбор моделей</li>
@@ -54,8 +55,8 @@
                 <div class="slider">
                     <div class="slide">
                         <div class="car-image"><img src="img/model1.jpg" alt="Модель 1"></div>
-                        <h3>Mercedes Coupe Sport</h3>
-                        <p>Год выпуска: 2012 Мотор: 1.8 л (204л.с.)бензин Тип КПП: Автомат Пробег: 122к.</p>
+                        <h3>Модель 1</h3>
+                        <p>Стильный седан с мощным двигателем и современными технологиями.</p>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model2.jpg" alt="Модель 2"></div>
@@ -128,7 +129,7 @@
                 <label for="car">Выберите автомобиль:</label>
                 <select id="car" name="car" required>
                     <option value="">-- Выберите модель --</option>
-                    <option value="Модель 1">Mercedes Coupe Sport - Год выпуска: 2012 Мотор: 1.8 л (204л.с.)бензин Тип КПП: Автомат Пробег: 122к </option>
+                    <option value="Модель 1">Модель 1 - Стильный седан</option>
                     <option value="Модель 2">Модель 2 - Спорткар</option>
                     <option value="Модель 3">Модель 3 - SUV</option>
                     <option value="Модель 4">Модель 4 - Электромобиль</option>
@@ -159,5 +160,11 @@
         <p>© 2025 rvDrive. Все права защищены.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Toggle mobile menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
