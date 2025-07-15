@@ -112,6 +112,40 @@
             <h2>О нас</h2>
             <p>rvDrive — это команда профессионалов, посвятившая себя созданию уникального опыта покупки и обслуживания автомобилей. С 2015 года мы работаем, чтобы предложить вам лучшие автомобили по доступным ценам. Наша миссия — сделать процесс выбора и приобретения автомобиля простым и приятным.</p>
             <p>Мы гордимся нашим ассортиментом, который включает как новые, так и подержанные автомобили, а также предоставляем услуги аренды и выкупа. Наши специалисты всегда готовы помочь вам найти идеальный вариант!</p>
+            <h3>Наши услуги</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-car"></i>
+                    <h4>Покупка авто</h4>
+                    <p>Выберите и купите автомобиль вашей мечты по лучшим ценам.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Аренда авто</h4>
+                    <p>Гибкая аренда автомобилей на любой срок.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h4>Аренда под выкуп</h4>
+                    <p>Аренда с возможностью последующего выкупа автомобиля.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Комиссия</h4>
+                    <p>Продайте свой автомобиль через нашу комиссионную службу.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Срочный выкуп</h4>
+                    <p>Быстрая оценка и выкуп вашего авто в кратчайшие сроки.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-search"></i>
+                    <h4>Автоподбор</h4>
+                    <p>Профессиональный подбор автомобиля под ваши нужды.</p>
+                </div>
+            </div>
+            <a href="#request" class="cta">Узнать больше</a>
         </section>
         <section id="specials" class="specials">
             <h2>Спец предложения</h2>
@@ -164,7 +198,7 @@
         </section>
     </main>
     <footer>
-        <p>© 2025 rvDrive. Все права защищены.</p>
+        <p>© 2025 rvDrive. Все права защищены. | <a href="#about" class="footer-link">Наши услуги</a></p>
     </footer>
     <script src="script.js"></script>
     <script>
@@ -185,10 +219,87 @@
             if (type === 'purchase') {
                 service.innerHTML += '<option value="Покупка">Покупка</option>';
                 service.innerHTML += '<option value="Аренда">Аренда</option>';
+                car.innerHTML = '<option value="">-- Выберите модель --</option>' +
+                                '<option value="Модель 1">Модель 1 - Стильный седан</option>' +
+                                '<option value="Модель 2">Модель 2 - Спорткар</option>' +
+                                '<option value="Модель 3">Модель 3 - SUV</option>' +
+                                '<option value="Модель 4">Модель 4 - Электромобиль</option>' +
+                                '<option value="Модель 5">Модель 5 - Кроссовер</option>' +
+                                '<option value="Модель 6">Модель 6 - Кабриолет</option>' +
+                                '<option value="Модель 7">Модель 7 - Хэтчбек</option>' +
+                                '<option value="Модель 8">Модель 8 - Внедорожник</option>' +
+                                '<option value="Модель 9">Модель 9 - Гибрид</option>' +
+                                '<option value="Модель 10">Модель 10 - Суперкар</option>';
                 car.value = ''; // Reset car selection
             } else if (type === 'commission') {
                 service.innerHTML += '<option value="Оценка и выкуп">Оценка и выкуп</option>';
+                car.innerHTML = '<option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>';
                 car.value = 'Мой автомобиль'; // Default to "My car" for commission
+            }
+        });
+
+        // Form submission and Telegram integration
+        const form = document.getElementById('inspectionForm');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const requestTypeValue = document.getElementById('requestType').value;
+            const car = document.getElementById('car').value;
+            const service = document.getElementById('service').value;
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!requestTypeValue || !car || !service || !fullName || !phone) {
+                formMessage.textContent = 'Пожалуйста, заполните все поля.';
+                return;
+            }
+
+            const message = `Новая заявка на осмотр:\n` +
+                            `Тип заявки: ${requestTypeValue === 'purchase' ? 'Покупка' : 'Комиссия'}\n` +
+                            `Автомобиль: ${car}\n` +
+                            `Услуга: ${service}\n` +
+                            `ФИО: ${fullName}\n` +
+                            `Телефон: ${phone}\n` +
+                            `Дата: ${new Date().toLocaleString('ru-RU')}`;
+            const botToken = '<YOUR_BOT_TOKEN>'; // Replace with your BotFather token
+            const chatId = '<YOUR_CHAT_ID>'; // Replace with your chat ID
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                if (data.ok) {
+                    formMessage.textContent = 'Заявка успешно отправлена!';
+                    form.reset();
+                    requestType.value = ''; // Reset request type
+                    service.innerHTML = '<option value="">-- Выберите услугу --</option>'; // Reset service
+                    car.innerHTML = '<option value="">-- Выберите модель --</option>' +
+                                    '<option value="Модель 1">Модель 1 - Стильный седан</option>' +
+                                    '<option value="Модель 2">Модель 2 - Спорткар</option>' +
+                                    '<option value="Модель 3">Модель 3 - SUV</option>' +
+                                    '<option value="Модель 4">Модель 4 - Электромобиль</option>' +
+                                    '<option value="Модель 5">Модель 5 - Кроссовер</option>' +
+                                    '<option value="Модель 6">Модель 6 - Кабриолет</option>' +
+                                    '<option value="Модель 7">Модель 7 - Хэтчбек</option>' +
+                                    '<option value="Модель 8">Модель 8 - Внедорожник</option>' +
+                                    '<option value="Модель 9">Модель 9 - Гибрид</option>' +
+                                    '<option value="Модель 10">Модель 10 - Суперкар</option>' +
+                                    '<option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>';
+                } else {
+                    formMessage.textContent = 'Ошибка при отправке заявки.';
+                }
+            } catch (error) {
+                formMessage.textContent = 'Произошла ошибка. Попробуйте позже.';
+                console.error('Error:', error);
             }
         });
     </script>
