@@ -12,6 +12,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
 // Slider functionality
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
@@ -25,6 +33,7 @@ function updateSlider() {
     slider.style.transform = `translateX(${offset}%)`;
     prevBtn.disabled = currentSlide === 0;
     nextBtn.disabled = currentSlide === totalSlides - 1;
+    updateStockStatuses(); // Update statuses when sliding
 }
 
 prevBtn.addEventListener('click', () => {
@@ -45,6 +54,34 @@ setInterval(() => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider();
 }, 5000);
+
+// Simulated inventory data (replace with API call in future)
+const inventoryData = [
+    { model: "Модель 1", status: "in-stock" },
+    { model: "Модель 2", status: "sold" },
+    { model: "Модель 3", status: "in-stock" },
+    { model: "Модель 4", status: "coming-soon" },
+    { model: "Модель 5", status: "in-stock" },
+    { model: "Модель 6", status: "sold" },
+    { model: "Модель 7", status: "in-stock" },
+    { model: "Модель 8", status: "coming-soon" },
+    { model: "Модель 9", status: "in-stock" },
+    { model: "Модель 10", status: "sold" }
+];
+
+// Function to update stock statuses
+function updateStockStatuses() {
+    slides.forEach((slide, index) => {
+        const statusElement = slide.querySelector('.stock-status');
+        const model = slide.querySelector('h3').textContent;
+        const status = inventoryData.find(item => item.model === model).status;
+        statusElement.textContent = status === "in-stock" ? "В наличии" : status === "sold" ? "Продано" : "Скоро будет";
+        statusElement.className = `stock-status ${status}`;
+    });
+}
+
+// Initial status update
+updateStockStatuses();
 
 // Dynamic service options based on request type
 const requestType = document.getElementById('requestType');
@@ -121,7 +158,7 @@ form.addEventListener('submit', async (e) => {
             form.reset();
             requestType.value = ''; // Reset request type
             service.innerHTML = '<option value="">-- Выберите услугу --</option>'; // Reset service
-            car.innerHTML = '<option value="">-- Выберите модель --</option>' + // Reset car
+            car.innerHTML = '<option value="">-- Выберите модель --</option>' +
                             '<option value="Модель 1">Модель 1 - Стильный седан</option>' +
                             '<option value="Модель 2">Модель 2 - Спорткар</option>' +
                             '<option value="Модель 3">Модель 3 - SUV</option>' +
