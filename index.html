@@ -45,7 +45,7 @@
                 <a href="#cars" class="cta">Посмотреть автомобили</a>
                 <a href="#about" class="cta">О нас</a>
                 <a href="#specials" class="cta">Спец предложения</a>
-                <a href="#request" class="cta secondary">Оставить заявку</a>
+                <a href="#request" class="cta secondary">Оставить заявка</a>
             </div>
         </section>
         <section id="cars" class="cars">
@@ -57,51 +57,61 @@
                         <div class="car-image"><img src="img/model1.jpg" alt="Модель 1"></div>
                         <h3>Модель 1</h3>
                         <p>Стильный седан с мощным двигателем и современными технологиями.</p>
+                        <span class="stock-status">В наличии</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model2.jpg" alt="Модель 2"></div>
                         <h3>Модель 2</h3>
                         <p>Спорткар с аэродинамическим дизайном и высокой скоростью.</p>
+                        <span class="stock-status">Продано</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model3.jpg" alt="Модель 3"></div>
                         <h3>Модель 3</h3>
                         <p>Комфортабельный SUV для семейных поездок.</p>
+                        <span class="stock-status">В наличии</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model4.jpg" alt="Модель 4"></div>
                         <h3>Модель 4</h3>
                         <p>Электромобиль с инновационной батареей.</p>
+                        <span class="stock-status">Скоро будет</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model5.jpg" alt="Модель 5"></div>
                         <h3>Модель 5</h3>
                         <p>Кроссовер с отличной проходимостью.</p>
+                        <span class="stock-status">В наличии</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model6.jpg" alt="Модель 6"></div>
                         <h3>Модель 6</h3>
                         <p>Люксовый кабриолет для элегантных прогулок.</p>
+                        <span class="stock-status">Продано</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model7.jpg" alt="Модель 7"></div>
                         <h3>Модель 7</h3>
                         <p>Компактный хэтчбек для городской езды.</p>
+                        <span class="stock-status">В наличии</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model8.jpg" alt="Модель 8"></div>
                         <h3>Модель 8</h3>
                         <p>Внедорожник с повышенной мощностью.</p>
+                        <span class="stock-status">Скоро будет</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model9.jpg" alt="Модель 9"></div>
                         <h3>Модель 9</h3>
                         <p>Гибридный автомобиль с экономичным расходом.</p>
+                        <span class="stock-status">В наличии</span>
                     </div>
                     <div class="slide">
                         <div class="car-image"><img src="img/model10.jpg" alt="Модель 10"></div>
                         <h3>Модель 10</h3>
                         <p>Суперкар с рекордной скоростью и дизайном будущего.</p>
+                        <span class="stock-status">Продано</span>
                     </div>
                 </div>
                 <button class="prev">❮</button>
@@ -157,6 +167,16 @@
                 <a href="#request" class="cta">Забронировать сейчас</a>
             </div>
         </section>
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами для получения дополнительной информации или консультации:</p>
+            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+            <p><strong>Адрес офиса:</strong> г. Москва, ул. , д. 10</p>
+            <p>Подписывайтесь на наш <a href="https://t.me/rvDriveChannel" target="_blank">Telegram канал</a> для актуальных новостей и предложений!</p>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.543070,55.546731&si=2fz6667z83nvv5gb7m8tddxfag" width="100%" height="300" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </section>
         <section id="request" class="request">
             <h2>Оставить заявку на осмотр</h2>
             <form id="inspectionForm">
@@ -201,107 +221,5 @@
         <p>© 2025 rvDrive. Все права защищены. | <a href="#about" class="footer-link">Наши услуги</a></p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // Toggle mobile menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-
-        // Dynamic service options based on request type
-        const requestType = document.getElementById('requestType');
-        const service = document.getElementById('service');
-        const car = document.getElementById('car');
-
-        requestType.addEventListener('change', function() {
-            const type = this.value;
-            service.innerHTML = '<option value="">-- Выберите услугу --</option>';
-
-            if (type === 'purchase') {
-                service.innerHTML += '<option value="Покупка">Покупка</option>';
-                service.innerHTML += '<option value="Аренда">Аренда</option>';
-                car.innerHTML = '<option value="">-- Выберите модель --</option>' +
-                                '<option value="Модель 1">Модель 1 - Стильный седан</option>' +
-                                '<option value="Модель 2">Модель 2 - Спорткар</option>' +
-                                '<option value="Модель 3">Модель 3 - SUV</option>' +
-                                '<option value="Модель 4">Модель 4 - Электромобиль</option>' +
-                                '<option value="Модель 5">Модель 5 - Кроссовер</option>' +
-                                '<option value="Модель 6">Модель 6 - Кабриолет</option>' +
-                                '<option value="Модель 7">Модель 7 - Хэтчбек</option>' +
-                                '<option value="Модель 8">Модель 8 - Внедорожник</option>' +
-                                '<option value="Модель 9">Модель 9 - Гибрид</option>' +
-                                '<option value="Модель 10">Модель 10 - Суперкар</option>';
-                car.value = ''; // Reset car selection
-            } else if (type === 'commission') {
-                service.innerHTML += '<option value="Оценка и выкуп">Оценка и выкуп</option>';
-                car.innerHTML = '<option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>';
-                car.value = 'Мой автомобиль'; // Default to "My car" for commission
-            }
-        });
-
-        // Form submission and Telegram integration
-        const form = document.getElementById('inspectionForm');
-        const formMessage = document.getElementById('formMessage');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const requestTypeValue = document.getElementById('requestType').value;
-            const car = document.getElementById('car').value;
-            const service = document.getElementById('service').value;
-            const fullName = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
-
-            if (!requestTypeValue || !car || !service || !fullName || !phone) {
-                formMessage.textContent = 'Пожалуйста, заполните все поля.';
-                return;
-            }
-
-            const message = `Новая заявка на осмотр:\n` +
-                            `Тип заявки: ${requestTypeValue === 'purchase' ? 'Покупка' : 'Комиссия'}\n` +
-                            `Автомобиль: ${car}\n` +
-                            `Услуга: ${service}\n` +
-                            `ФИО: ${fullName}\n` +
-                            `Телефон: ${phone}\n` +
-                            `Дата: ${new Date().toLocaleString('ru-RU')}`;
-            const botToken = '<YOUR_BOT_TOKEN>'; // Replace with your BotFather token
-            const chatId = '<YOUR_CHAT_ID>'; // Replace with your chat ID
-
-            try {
-                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message
-                    })
-                });
-
-                const data = await response.json();
-                if (data.ok) {
-                    formMessage.textContent = 'Заявка успешно отправлена!';
-                    form.reset();
-                    requestType.value = ''; // Reset request type
-                    service.innerHTML = '<option value="">-- Выберите услугу --</option>'; // Reset service
-                    car.innerHTML = '<option value="">-- Выберите модель --</option>' +
-                                    '<option value="Модель 1">Модель 1 - Стильный седан</option>' +
-                                    '<option value="Модель 2">Модель 2 - Спорткар</option>' +
-                                    '<option value="Модель 3">Модель 3 - SUV</option>' +
-                                    '<option value="Модель 4">Модель 4 - Электромобиль</option>' +
-                                    '<option value="Модель 5">Модель 5 - Кроссовер</option>' +
-                                    '<option value="Модель 6">Модель 6 - Кабриолет</option>' +
-                                    '<option value="Модель 7">Модель 7 - Хэтчбек</option>' +
-                                    '<option value="Модель 8">Модель 8 - Внедорожник</option>' +
-                                    '<option value="Модель 9">Модель 9 - Гибрид</option>' +
-                                    '<option value="Модель 10">Модель 10 - Суперкар</option>' +
-                                    '<option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>';
-                } else {
-                    formMessage.textContent = 'Ошибка при отправке заявки.';
-                }
-            } catch (error) {
-                formMessage.textContent = 'Произошла ошибка. Попробуйте позже.';
-                console.error('Error:', error);
-            }
-        });
-    </script>
 </body>
 </html>
