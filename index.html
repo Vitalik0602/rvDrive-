@@ -1,225 +1,210 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rvDrive - Авто по первым ценам РФ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Автосалон rvDrive — аренда, выкуп и продажа авто по лучшим ценам в РФ">
+  <title>rvDrive — Аренда, выкуп и продажа авто</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="rvDrive Logo">
-            <span>rvDrive</span>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="rvDrive Logo">
+      <span>rvDrive</span>
+    </div>
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    <nav>
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#cars">Автомобили</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#specials">Спецпредложения</a></li>
+        <li><a href="#request">Заявка</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+      <div class="glass-overlay"></div>
+      <h1>Добро пожаловать в rvDrive</h1>
+      <p class="fade-in">Автомобили по лучшим ценам</p>
+      <p class="intro">Мы предлагаем аренду, выкуп и продажу авто. Лучшие условия, широкий выбор моделей и надёжная поддержка.</p>
+      <ul class="features">
+        <li>Продажа и аренда автомобилей</li>
+        <li>Аренда с выкупом</li>
+        <li>Комиссионная продажа</li>
+        <li>Срочный выкуп</li>
+      </ul>
+      <div class="cta-container">
+        <a href="#cars" class="cta">Автомобили</a>
+        <a href="#request" class="cta secondary">Оставить заявку</a>
+      </div>
+    </section>
+
+    <!-- Секция: Автомобили -->
+    <section id="cars" class="cars">
+      <h2>Наши автомобили</h2>
+      <p>Ниже представлены популярные модели, доступные под заказ, аренду и продажу:</p>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <div class="car-image"><img src="img/model1.jpg" alt="E200 Coupe"></div>
+            <h3>E200 Coupe</h3>
+            <p>2.0 л, стиль, комфорт, бензин, АКПП</p>
+            <span class="stock-status in-stock">В наличии</span>
+          </div>
+          <div class="slide">
+            <div class="car-image"><img src="img/model2.jpg" alt="GLE Coupe"></div>
+            <h3>GLE Coupe</h3>
+            <p>Мощный SUV премиум-класса</p>
+            <span class="stock-status sold">Продано</span>
+          </div>
+		  <div class="slide">
+            <div class="car-image"><img src="img/model3.jpg" alt="GLE "></div>
+            <h3>GLE Coupe</h3>
+            <p>Мощный SUV премиум-класса</p>
+            <span class="stock-status sold">Продано</span>
+          </div>
+		  <div class="slide">
+            <div class="car-image"><img src="img/model2.jpg" alt="GLE Coupe"></div>
+            <h3>GLE Coupe</h3>
+            <p>Мощный SUV премиум-класса</p>
+            <span class="stock-status sold">Продано</span>
+          </div>
+		  <div class="slide">
+            <div class="car-image"><img src="img/model2.jpg" alt="GLE Coupe"></div>
+            <h3>GLE Coupe</h3>
+            <p>Мощный SUV премиум-класса</p>
+            <span class="stock-status sold">Продано</span>
+          </div>
         </div>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#cars">Автомобили</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#specials">Спец предложения</a></li>
-                <li><a href="#request">Заявка</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+      <h2>О нас</h2>
+      <p>Мы занимаемся арендой, выкупом и продажей автомобилей по доступным ценам. Работаем по всей РФ. Гарантируем надёжность, прозрачность и индивидуальный подход.</p>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+      <h2>Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <i class="fas fa-car"></i>
+          <h4>Продажа авто</h4>
+          <p>Поможем подобрать и приобрести автомобиль вашей мечты.</p>
         </div>
-    </header>
-    <main>
-        <section id="home" class="hero">
-            <div class="glass-overlay"></div>
-            <h1>Добро пожаловать в rvDrive</h1>
-            <p class="fade-in">Авто по первых ценам РФ</p>
-            <p class="intro">Откройте для себя мир современных автомобилей! У нас вы найдете стильные седаны, мощные спорткары, комфортные SUV и инновационные электромобили. Каждый автомобиль — это сочетание дизайна, технологий и доступности.</p>
-            <ul class="features">
-                <li>Широкий выбор моделей</li>
-                <li>Лучшие цены на рынке</li>
-                <li>Гибкие условия покупки и аренды</li>
-                <li>Профессиональная поддержка</li>
-            </ul>
-            <div class="cta-container">
-                <a href="#cars" class="cta">Посмотреть автомобили</a>
-                <a href="#about" class="cta">О нас</a>
-                <a href="#specials" class="cta">Спец предложения</a>
-                <a href="#request" class="cta secondary">Оставить заявка</a>
-            </div>
-        </section>
-        <section id="cars" class="cars">
-            <h2>Наши автомобили</h2>
-            <p>Выберите свой идеальный автомобиль из нашего широкого ассортимента.</p>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model1.jpg" alt="Модель 1"></div>
-                        <h3>Модель 1</h3>
-                        <p>Стильный седан с мощным двигателем и современными технологиями.</p>
-                        <span class="stock-status">В наличии</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model2.jpg" alt="Модель 2"></div>
-                        <h3>Модель 2</h3>
-                        <p>Спорткар с аэродинамическим дизайном и высокой скоростью.</p>
-                        <span class="stock-status">Продано</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model3.jpg" alt="Модель 3"></div>
-                        <h3>Модель 3</h3>
-                        <p>Комфортабельный SUV для семейных поездок.</p>
-                        <span class="stock-status">В наличии</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model4.jpg" alt="Модель 4"></div>
-                        <h3>Модель 4</h3>
-                        <p>Электромобиль с инновационной батареей.</p>
-                        <span class="stock-status">Скоро будет</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model5.jpg" alt="Модель 5"></div>
-                        <h3>Модель 5</h3>
-                        <p>Кроссовер с отличной проходимостью.</p>
-                        <span class="stock-status">В наличии</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model6.jpg" alt="Модель 6"></div>
-                        <h3>Модель 6</h3>
-                        <p>Люксовый кабриолет для элегантных прогулок.</p>
-                        <span class="stock-status">Продано</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model7.jpg" alt="Модель 7"></div>
-                        <h3>Модель 7</h3>
-                        <p>Компактный хэтчбек для городской езды.</p>
-                        <span class="stock-status">В наличии</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model8.jpg" alt="Модель 8"></div>
-                        <h3>Модель 8</h3>
-                        <p>Внедорожник с повышенной мощностью.</p>
-                        <span class="stock-status">Скоро будет</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model9.jpg" alt="Модель 9"></div>
-                        <h3>Модель 9</h3>
-                        <p>Гибридный автомобиль с экономичным расходом.</p>
-                        <span class="stock-status">В наличии</span>
-                    </div>
-                    <div class="slide">
-                        <div class="car-image"><img src="img/model10.jpg" alt="Модель 10"></div>
-                        <h3>Модель 10</h3>
-                        <p>Суперкар с рекордной скоростью и дизайном будущего.</p>
-                        <span class="stock-status">Продано</span>
-                    </div>
-                </div>
-                <button class="prev">❮</button>
-                <button class="next">❯</button>
-            </div>
-        </section>
-        <section id="about" class="about">
-            <h2>О нас</h2>
-            <p>rvDrive — это команда профессионалов, посвятившая себя созданию уникального опыта покупки и обслуживания автомобилей. С 2015 года мы работаем, чтобы предложить вам лучшие автомобили по доступным ценам. Наша миссия — сделать процесс выбора и приобретения автомобиля простым и приятным.</p>
-            <p>Мы гордимся нашим ассортиментом, который включает как новые, так и подержанные автомобили, а также предоставляем услуги аренды и выкупа. Наши специалисты всегда готовы помочь вам найти идеальный вариант!</p>
-            <h3>Наши услуги</h3>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-car"></i>
-                    <h4>Покупка авто</h4>
-                    <p>Выберите и купите автомобиль вашей мечты по лучшим ценам.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <h4>Аренда авто</h4>
-                    <p>Гибкая аренда автомобилей на любой срок.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h4>Аренда под выкуп</h4>
-                    <p>Аренда с возможностью последующего выкупа автомобиля.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-balance-scale"></i>
-                    <h4>Комиссия</h4>
-                    <p>Продайте свой автомобиль через нашу комиссионную службу.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>Срочный выкуп</h4>
-                    <p>Быстрая оценка и выкуп вашего авто в кратчайшие сроки.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-search"></i>
-                    <h4>Автоподбор</h4>
-                    <p>Профессиональный подбор автомобиля под ваши нужды.</p>
-                </div>
-            </div>
-            <a href="#request" class="cta">Узнать больше</a>
-        </section>
-        <section id="specials" class="specials">
-            <h2>Спец предложения</h2>
-            <div class="special-offer">
-                <h3>Горячее предложение!</h3>
-                <p><strong>Модель 3 (SUV)</strong> со скидкой 15%!</p>
-                <p>Оригинальная цена: 2,500,000 руб. | Скидка: 375,000 руб. | Новая цена: 2,125,000 руб.</p>
-                <p>Срок действия: до 31 июля 2025. Спешите забронировать!</p>
-                <a href="#request" class="cta">Забронировать сейчас</a>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Контакты</h2>
-            <p>Свяжитесь с нами для получения дополнительной информации или консультации:</p>
-            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
-            <p><strong>Адрес офиса:</strong> г. Москва, ул. , д. 10</p>
-            <p>Подписывайтесь на наш <a href="https://t.me/rvDriveChannel" target="_blank">Telegram канал</a> для актуальных новостей и предложений!</p>
-            <div class="map-container">
-                <iframe src="https://yandex.ru/map-widget/v1/?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.543070,55.546731&si=2fz6667z83nvv5gb7m8tddxfag" width="100%" height="300" frameborder="0" allowfullscreen="true"></iframe>
-            </div>
-        </section>
-        <section id="request" class="request">
-            <h2>Оставить заявку на осмотр</h2>
-            <form id="inspectionForm">
-                <label for="requestType">Тип заявки:</label>
-                <select id="requestType" name="requestType" required>
-                    <option value="">-- Выберите тип --</option>
-                    <option value="purchase">Покупка</option>
-                    <option value="commission">Комиссия</option>
-                </select>
-                <label for="car">Выберите автомобиль:</label>
-                <select id="car" name="car" required>
-                    <option value="">-- Выберите модель --</option>
-                    <option value="Модель 1">Модель 1 - Стильный седан</option>
-                    <option value="Модель 2">Модель 2 - Спорткар</option>
-                    <option value="Модель 3">Модель 3 - SUV</option>
-                    <option value="Модель 4">Модель 4 - Электромобиль</option>
-                    <option value="Модель 5">Модель 5 - Кроссовер</option>
-                    <option value="Модель 6">Модель 6 - Кабриолет</option>
-                    <option value="Модель 7">Модель 7 - Хэтчбек</option>
-                    <option value="Модель 8">Модель 8 - Внедорожник</option>
-                    <option value="Модель 9">Модель 9 - Гибрид</option>
-                    <option value="Модель 10">Модель 10 - Суперкар</option>
-                    <option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>
-                </select>
-                <label for="service">Выберите услугу:</label>
-                <select id="service" name="service" required>
-                    <option value="">-- Выберите услугу --</option>
-                    <option value="Покупка">Покупка</option>
-                    <option value="Аренда">Аренда</option>
-                    <option value="Оценка и выкуп">Оценка и выкуп</option>
-                </select>
-                <label for="fullName">ФИО:</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Введите ваше ФИО">
-                <label for="phone">Контактный телефон:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                <button type="submit" class="cta">Отправить заявку</button>
-            </form>
-            <p id="formMessage"></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 rvDrive. Все права защищены. | <a href="#about" class="footer-link">Наши услуги</a></p>
-    </footer>
-    <script src="script.js"></script>
+        <div class="service-item">
+          <i class="fas fa-key"></i>
+          <h4>Аренда</h4>
+          <p>Прокат автомобилей на любой срок с полной страховкой.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-handshake"></i>
+          <h4>Аренда с выкупом</h4>
+          <p>Идеально для тех, кто хочет взять авто с постепенной оплатой.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-balance-scale"></i>
+          <h4>Комиссия</h4>
+          <p>Продайте своё авто быстро и выгодно через нас.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-money-bill-wave"></i>
+          <h4>Срочный выкуп</h4>
+          <p>Деньги за автомобиль — в день обращения.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-search-location"></i>
+          <h4>Автоподбор</h4>
+          <p>Найдём лучший вариант по нужным параметрам и бюджету.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Спецпредложения -->
+    <section id="specials" class="specials">
+      <h2>Спецпредложения</h2>
+      <div class="special-offer">
+        <h3>🔥 GLE Coupe в аренду с выкупом</h3>
+        <p>Первые 3 месяца по сниженной ставке! Успей забронировать до конца месяца.</p>
+        <a href="#request" class="cta">Оставить заявку</a>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+      <h2>Контакты</h2>
+      <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+      <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 10</p>
+      <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4d88ea9fc6c3e3f2b6cf9d6d3d5b8b65d93eb38d3dd6fa46eaf3bfc67d6b398b&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+      </div>
+    </section>
+
+    <!-- Заявка -->
+    <section id="request" class="request">
+      <h2>Оставить заявку</h2>
+      <form id="inspectionForm">
+        <label for="requestType">Тип заявки:</label>
+        <select id="requestType" name="requestType" required>
+          <option value="">-- Выберите тип --</option>
+          <option value="purchase">Покупка</option>
+          <option value="commission">Комиссия</option>
+        </select>
+
+        <label for="car">Автомобиль:</label>
+        <select id="car" name="car" required>
+          <option value="">-- Выберите авто --</option>
+          <option value="E200 Coupe">E200 Coupe</option>
+          <option value="GLE Coupe">GLE Coupe</option>
+          <option value="Мой автомобиль">Мой автомобиль (для комиссии)</option>
+        </select>
+
+        <label for="service">Услуга:</label>
+        <select id="service" name="service" required>
+          <option value="">-- Выберите --</option>
+          <option value="Аренда">Аренда</option>
+          <option value="Выкуп">Выкуп</option>
+          <option value="Аренда с выкупом">Аренда с выкупом</option>
+        </select>
+
+        <label for="fullName">ФИО:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <div id="uploadField" style="display:none">
+          <label for="photo">Фото автомобиля:</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+
+        <button type="submit" class="cta">Отправить</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 rvDrive. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
