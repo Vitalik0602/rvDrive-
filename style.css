@@ -639,7 +639,7 @@ footer {
   .menu-toggle {
     display: block;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 20px;
     z-index: 11;
   }
@@ -652,7 +652,7 @@ footer {
     display: block;
     position: absolute;
     top: 70px;
-    left: 20;
+    left: 00;
     width: 100%;
     background: #1c1c1c;
     padding: 20px;
@@ -670,7 +670,7 @@ footer {
     display: flex;
     gap: 10px;
     position: absolute;
-    right: 80px;
+    right: 70px;
     top: 20px;
     z-index: 10;
   }
