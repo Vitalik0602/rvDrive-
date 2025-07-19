@@ -638,10 +638,6 @@ footer {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 11;
   }
 
   nav {
@@ -656,25 +652,21 @@ footer {
     width: 100%;
     background: #1c1c1c;
     padding: 20px;
-    z-index: 999;
   }
 
   nav ul {
     flex-direction: column;
     gap: 16px;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
   }
 
   .social-icons {
-    display: flex;
-    gap: 10px;
     position: absolute;
-    left: 20px; /* Перемещаем иконки в левый верхний угол */
+    right: 10px;
     top: 20px;
     z-index: 10;
+    justify-content: flex-end;
   }
-
   .social-icons a {
     font-size: 1.2em;
   }
