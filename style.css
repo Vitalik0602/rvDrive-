@@ -641,7 +641,7 @@ footer {
     position: absolute;
     right: 20px;
     top: 20px;
-    z-index: 41;
+    z-index: 11;
   }
 
   nav {
@@ -670,7 +670,7 @@ footer {
     display: flex;
     gap: 10px;
     position: absolute;
-    right: 70px;
+    right: 10px;
     top: 20px;
     z-index: 10;
   }
