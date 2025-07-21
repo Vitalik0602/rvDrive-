@@ -1,5 +1,5 @@
 const TOKEN = '7990942936:AAG1lRKSS2r1Q2_svd2L41ngtp43LBpFMeo';
-const CHAT_ID = '-1002816551291';
+const CHAT_ID = '-1002816551291'; // Замените на актуальный CHAT_ID супергруппы
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TOKEN}`;
 
 // Sound effect for successful form submission
@@ -111,6 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     formMessage.textContent = '❌ Пожалуйста, заполните все обязательные поля.';
                     return;
                 }
+            } else if (requestType === 'Комиссия' || requestType === 'Автоломбард') {
+                if (!fullName || !phone) {
+                    formMessage.textContent = '❌ Пожалуйста, заполните все обязательные поля (ФИО и телефон).';
+                    return;
+                }
             } else {
                 if (!car || !fullName || !phone) {
                     formMessage.textContent = '❌ Пожалуйста, заполните все обязательные поля.';
@@ -122,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let message = `
 🚗 *Новая заявка с сайта*  
 Тип: ${requestType}  
-${requestType === 'Автоподбор' ? `Бюджет: ${budget}  \nЖелаемая машина: ${desiredCar}` : `Авто: ${car}`}  
+${requestType === 'Автоподбор' ? `Бюджет: ${budget}  \nЖелаемая машина: ${desiredCar}` : (car ? `Авто: ${car}` : 'Авто: не выбрано')}  
 ФИО: ${fullName}  
 Телефон: ${phone}
             `;
@@ -156,6 +161,7 @@ ${requestType === 'Автоподбор' ? `Бюджет: ${budget}  \nЖела�
                     })
                     .catch(error => {
                         formMessage.textContent = `❌ Ошибка отправки: ${error.message}`;
+                        console.error('Ошибка отправки:', error);
                     });
             } else {
                 fetch(`${TELEGRAM_API_URL}/sendMessage`, {
@@ -185,6 +191,7 @@ ${requestType === 'Автоподбор' ? `Бюджет: ${budget}  \nЖела�
                     })
                     .catch(error => {
                         formMessage.textContent = `❌ Ошибка отправки: ${error.message}`;
+                        console.error('Ошибка отправки:', error);
                     });
             }
         });
@@ -239,6 +246,7 @@ ${messageText ? `Сообщение: ${messageText}` : ''}
                 })
                 .catch(error => {
                     formMessage.textContent = `❌ Ошибка отправки: ${error.message}`;
+                    console.error('Ошибка отправки:', error);
                 });
         });
     }
