@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="rvDrive - лучшие автомобили для покупки, аренды и аренды с выкупом. Надежность, комфорт и стиль!">
+    <meta name="keywords" content="автомобили, покупка авто, аренда авто, аренда с выкупом, автоломбард, автоподбор, Москва">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://kit.fontawesome.com; style-src 'self' https: 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.telegram.org;">
+
+    <title>rvDrive</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#home"><img src="img/logo.png" alt="rvDrive Logo"></a>
+            <span>rvDrive</span>
+        </div>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#cars">Автомобили</a>
+            <a href="#services">Услуги</a>
+            <a href="#offers">Спецпредложения</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#request">Заявка</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://t.me/rvDrive" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://wa.me/+79991234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@rvDrive" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <button class="menu-toggle" aria-label="Открыть/закрыть меню">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="glass-overlay"></div>
+        <div class="hero-content">
+            <h1>rvDrive - Твой путь к мечте</h1>
+            <p class="intro">Добро пожаловать в rvDrive! Мы предлагаем лучшие автомобили для покупки, аренды и аренды с выкупом. Надежность, комфорт и стиль – это про нас.</p>
+            <ul class="features">
+                <li>Широкий выбор автомобилей</li>
+                <li>Гибкие условия аренды</li>
+                <li>Прозрачные сделки</li>
+                <li>Профессиональная поддержка</li>
+            </ul>
+            <div class="cta-container">
+                <a href="#request" class="cta">Оставить заявку</a>
+                <a href="#cars" class="cta secondary">Посмотреть автомобили</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="cars">
+        <h2>Наши автомобили</h2>
+        <div class="cars-grid">
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="img/audi2.jpg" alt="Audi Q8">
+                </div>
+                <h3>Audi Q8 3.0 TFSI quattro (2019)</h3>
+                <p>Мощный кроссовер с премиальной отделкой</p>
+                <span class="stock-status in-stock">В наличии</span>
+                <a href="model1.html" class="cta">Подробнее</a>
+            </div>
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="img/mercedes_c180.jpg" alt="Mercedes-Benz C180">
+                </div>
+                <h3>Mercedes-Benz C180 (2014)</h3>
+                <p>Стильный и надёжный седан бизнес-класса</p>
+                <span class="stock-status in-stock">В наличии</span>
+                <a href="model2.html" class="cta">Подробнее</a>
+            </div>
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="img/ford_focus.jpg" alt="Ford Focus 2">
+                </div>
+                <h3>Ford Focus 2</h3>
+                <p>Экономичный и практичный хэтчбек</p>
+                <span class="stock-status in-stock">В наличии</span>
+                <a href="model3.html" class="cta">Подробнее</a>
+            </div>
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="img/mercedes_gle.jpg" alt="Mercedes-Benz GLE Coupe">
+                </div>
+                <h3>Mercedes-Benz GLE Coupe</h3>
+                <p>Роскошный внедорожник с современными технологиями</p>
+                <span class="stock-status in-stock">В наличии</span>
+                <a href="model4.html" class="cta">Подробнее</a>
+            </div>
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="img/mercedes_e200.jpg" alt="Mercedes-Benz E200 Coupe">
+                </div>
+                <h3>Mercedes-Benz E200 Coupe</h3>
+                <p>Воплощение стиля и комфорта</p>
+                <span class="stock-status in-stock">В наличии</span>
+                <a href="model5.html" class="cta">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-car"></i>
+                <h4>Продажа</h4>
+                <p>Широкий выбор автомобилей на любой бюджет</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-key"></i>
+                <h4>Аренда</h4>
+                <p>Гибкие условия аренды на любой срок</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-handshake"></i>
+                <h4>Аренда с выкупом</h4>
+                <p>Удобный путь к владению автомобилем</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-file-alt"></i>
+                <h4>Комиссия</h4>
+                <p>Продажа вашего авто с нашей помощью</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-money-bill"></i>
+                <h4>Срочный выкуп</h4>
+                <p>Быстрая продажа вашего авто</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-piggy-bank"></i>
+                <h4>Автоломбард</h4>
+                <p>Деньги под залог автомобиля</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-search"></i>
+                <h4>Автоподбор</h4>
+                <p>Найдём лучший вариант по нужным параметрам и бюджету</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+        <h2>Спецпредложения</h2>
+        <p>Только сейчас! Уникальные предложения, которые сделают вашу мечту ближе. Не упустите шанс!</p>
+        <div class="offers-grid">
+            <div class="offer-item">
+                <h3>Аренда Audi Q8 на выходные</h3>
+                <p>Прокатитесь на премиум-кроссовере всего за 10,000 ₽/выходные! Полный привод, комфорт и стиль включены.</p>
+                <span class="offer-price">10,000 ₽</span>
+                <a href="#request" class="cta offer-cta">Забронировать сейчас</a>
+            </div>
+            <div class="offer-item">
+                <h3>Mercedes-Benz C180 со скидкой</h3>
+                <p>Купите стильный седан с выгодой 200,000 ₽! Полная комплектация, идеальное состояние.</p>
+                <span class="offer-price">1,400,000 ₽</span>
+                <a href="#request" class="cta offer-cta">Купить со скидкой</a>
+            </div>
+            <div class="offer-item">
+                <h3>Аренда с выкупом GLE Coupe</h3>
+                <p>Роскошный внедорожник ваш с платежом от 120,000 ₽/мес! Без первоначального взноса.</p>
+                <span class="offer-price">от 120,000 ₽/мес</span>
+                <a href="#request" class="cta offer-cta">Оформить сейчас</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>📍 Адрес: г. Москва, ул. Примерная, д. 123</p>
+        <p>📞 Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+        <p>📧 Email: <a href="mailto:info@rvdrive.ru">info@rvdrive.ru</a></p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.123456789!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0J%2FRgNC%2B0YHRg9C10Y%2FQtQ!5e0!3m2!1sru!2sru!4v1698765432100!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Карта расположения rvDrive"></iframe>
+        </div>
+    </section>
+
+    <section id="request">
+        <h2>Оставить заявку</h2>
+        <form id="inspectionForm" aria-label="Форма заявки на автомобиль">
+            <label for="requestType">Тип заявки:</label>
+            <select id="requestType" required>
+                <option value="">-- Выберите --</option>
+                <option value="Покупка">Покупка</option>
+                <option value="Аренда">Аренда</option>
+                <option value="Аренда с выкупом">Аренда с выкупом</option>
+                <option value="Комиссия">Комиссия</option>
+                <option value="Автоломбард">Автоломбард</option>
+                <option value="Автоподбор">Автоподбор</option>
+            </select>
+
+            <label for="car">Автомобиль:</label>
+            <select id="car" required></select>
+
+            <div id="uploadField" style="display: none;">
+                <label for="photo">Фото автомобиля:</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" required>
+
+            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Отправить</button>
+            <p id="formMessage" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 rvDrive. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
