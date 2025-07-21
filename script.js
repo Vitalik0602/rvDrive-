@@ -1,5 +1,5 @@
 const TOKEN = '7990942936:AAG1lRKSS2r1Q2_svd2L41ngtp43LBpFMeo';
-const CHAT_ID = '-4891252892';
+const CHAT_ID = '-1002816551291';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TOKEN}`;
 
 // Sound effect for successful form submission
